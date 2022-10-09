@@ -42,7 +42,7 @@ public class RacingServiceImpl implements RacingService {
         String[] carNames = input.split(",");
         int nameCount = input.length() - input.replaceAll(",", "").length() + 1;
         if (nameCount != carNames.length) {
-            throw new IllegalArgumentException(ErrorMessage.CAR_NAME_COUNT_NOT_MATCH);
+            throw new IllegalArgumentException(ErrorMessage.CAR_NAME_EMPTY);
         }
         return carNames;
     }

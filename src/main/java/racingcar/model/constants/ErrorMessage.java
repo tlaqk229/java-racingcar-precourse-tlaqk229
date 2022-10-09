@@ -8,5 +8,4 @@ public final class ErrorMessage {
     public static final String CAR_NAME_LENGTH_LIMIT = "자동차 이름은 5자 이하만 가능하다.";
     public static final String CAR_NAME_EMPTY = "자동차 이름은 공백 이외의 문자가 1자 이상 포함되어 있어야 한다.";
     public static final String CAR_DUPLICATE = "중복되지 않는 자동차 이름을 입력해야 한다.";
-    public static final String CAR_NAME_COUNT_NOT_MATCH = "입력되지 않은 자동차 이름이 존재한다.";
 }
