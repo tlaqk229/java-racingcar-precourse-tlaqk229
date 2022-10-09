@@ -50,4 +50,19 @@ public class RacingServiceImpl implements RacingService {
         }
     }
 
+    /**
+     * 자동차 경주 1회 실행
+     *
+     * @param entry 자동차 목록
+     * @param roundResult 현재까지 경주 진행한 결과
+     */
+    @Override
+    public void roundProceed(Entry entry, RoundResult roundResult) {
+        for (int i = 0; i < roundResult.getRoundResult().size(); i++) {
+            roundResult.getRoundResult().get(i).addRound();
+            int result = Race.goForward(Race.createRandomNumber());
+            roundResult.getRoundResult().get(i).updatePosition(result);
+        }
+    }
+
 }

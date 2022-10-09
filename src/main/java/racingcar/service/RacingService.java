@@ -25,4 +25,12 @@ public interface RacingService {
      */
     TotalRound setTotalRound(String totalRoundInput);
 
+    /**
+     * 자동차 경주 1회 실행
+     *
+     * @param entry 자동차 목록
+     * @param roundResult 현재까지 경주 진행한 결과
+     */
+    void roundProceed(Entry entry, RoundResult roundResult);
+
 }
