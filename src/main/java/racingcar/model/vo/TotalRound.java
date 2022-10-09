@@ -4,6 +4,7 @@ import racingcar.model.constants.ErrorMessage;
 
 public class TotalRound {
 
+    private static final int MIN_TOTAL_ROUND_COUNT = 1;
     private final int totalRound;
 
     public TotalRound(int number) {
@@ -25,7 +26,7 @@ public class TotalRound {
     }
 
     public static boolean validateRoundCount(int number) {
-        return number >= 1;
+        return number >= MIN_TOTAL_ROUND_COUNT;
     }
 
     public static boolean validateRoundNumber(String input) {
