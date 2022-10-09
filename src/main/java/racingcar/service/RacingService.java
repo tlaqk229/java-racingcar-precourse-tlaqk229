@@ -18,6 +18,22 @@ public interface RacingService {
     Entry setCarEntry(EnteredCarNames carNamesInput);
 
     /**
+     * 자동차 이름 문자열 배열로 분리
+     *
+     * @param input 입력받은 자동자 이름들(문자열)
+     * @return 배열로 분리된 자동차 이름들
+     */
+    String[] splitCarNames(String input);
+
+    /**
+     * 자동차 이름 배열을 사용하여 자동차 목록 객체 생성
+     *
+     * @param carNames 자동차 이름 배열
+     * @return 자동차 목록 객체(Entry)
+     */
+    Entry makeEntry(String[] carNames);
+
+    /**
      * 총 시도 횟수 세팅
      *
      * @param totalRoundInput 입력받은 시도횟수
