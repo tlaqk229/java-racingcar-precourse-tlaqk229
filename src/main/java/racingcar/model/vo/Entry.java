@@ -15,7 +15,7 @@ public class Entry {
         this.entry = entry;
     }
 
-    public static boolean checkDuplication(List<Car> entry) {
+    protected static boolean checkDuplication(List<Car> entry) {
         HashSet<String> cars = new HashSet<>();
         for (Car car : entry) {
             String carName = car.getCarName();

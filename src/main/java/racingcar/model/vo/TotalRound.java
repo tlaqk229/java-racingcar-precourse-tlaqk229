@@ -25,11 +25,11 @@ public class TotalRound {
         this.totalRound = number;
     }
 
-    public static boolean validateRoundCount(int number) {
+    protected static boolean validateRoundCount(int number) {
         return number >= MIN_TOTAL_ROUND_COUNT;
     }
 
-    public static boolean validateRoundNumber(String input) {
+    protected static boolean validateRoundNumber(String input) {
         try {
             Integer.parseInt(input);
             return true;

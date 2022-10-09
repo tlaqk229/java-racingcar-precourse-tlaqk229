@@ -1,11 +1,10 @@
-package racingcar;
+package racingcar.model.vo;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import racingcar.model.vo.Car;
 
 public class CarTest {
 

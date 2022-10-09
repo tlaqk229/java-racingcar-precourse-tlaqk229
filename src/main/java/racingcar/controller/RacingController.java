@@ -27,7 +27,7 @@ public class RacingController {
      *
      * @return Entry 참가 자동차 목록
      */
-    public Entry getCarEntry() {
+    private Entry getCarEntry() {
         Entry entry;
         do {
             entry = racingService.setCarEntry(racingView.carNamesInput());
@@ -40,7 +40,7 @@ public class RacingController {
      *
      * @return TotalRound 시도 횟수
      */
-    public TotalRound getTotalRound() {
+    private TotalRound getTotalRound() {
         TotalRound totalRound;
         do {
             totalRound = racingService.setTotalRound(racingView.totalRoundInput());

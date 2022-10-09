@@ -17,11 +17,11 @@ public class Car {
         this.carName = name;
     }
 
-    public static boolean validateNameLength(String name) {
+    protected static boolean validateNameLength(String name) {
         return name.length() <= NAME_LENGTH_LIMIT;
     }
 
-    public static boolean validateNameNotEmpty(String name) {
+    protected static boolean validateNameNotEmpty(String name) {
         if (name == null) {
             return false;
         }
