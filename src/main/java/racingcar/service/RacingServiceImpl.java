@@ -65,4 +65,40 @@ public class RacingServiceImpl implements RacingService {
         }
     }
 
+    /**
+     * 최종 우승자 목록 확보
+     *
+     * @param roundResult 현재까지 경주 진행한 결과
+     * @return 우승자 목록
+     */
+    @Override
+    public RaceResult getRaceResult(RoundResult roundResult) {
+        int maxPosition = 0;
+        RaceResult raceResult = new RaceResult();
+        for (CarState carState : roundResult.getRoundResult()) {
+            maxPosition = addWinner(maxPosition, carState, raceResult);
+        }
+        return raceResult;
+    }
+
+    /**
+     * 우승자 추가
+     *
+     * @param maxPosition 현재까지 가장 멀리간 위치
+     * @param carState 자동차 상태
+     * @param raceResult 현재까지 경주 진행한 결과
+     * @return 가장 멀리간 위치(최신)
+     */
+    @Override
+    public int addWinner(int maxPosition, CarState carState, RaceResult raceResult) {
+        if (carState.getPosition() > maxPosition) {
+            raceResult.getWinners().clear();
+            raceResult.getWinners().add(carState.getCarName());
+            return carState.getPosition();
+        }
+        if (carState.getPosition() == maxPosition) {
+            raceResult.getWinners().add(carState.getCarName());
+        }
+        return maxPosition;
+    }
 }
