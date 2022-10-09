@@ -36,7 +36,7 @@ public class RacingView {
      * @param roundResult 경주 진행 결과
      */
     public void roundResultPrint(RoundResult roundResult) {
-        for (int i = 0; i < roundResult.getRoundResult().size(); i ++) {
+        for (int i = 0; i < roundResult.getRoundResult().size(); i++) {
             CarState carState = roundResult.getRoundResult().get(i);
             carResultPrint(carState);
         }

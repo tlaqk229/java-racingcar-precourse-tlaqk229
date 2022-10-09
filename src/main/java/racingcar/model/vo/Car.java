@@ -22,7 +22,9 @@ public class Car {
     }
 
     public static boolean validateNameNotEmpty(String name) {
-        if (name == null) return false;
+        if (name == null) {
+            return false;
+        }
         name = name.replaceAll(" ", "");
         return name.length() != 0;
     }

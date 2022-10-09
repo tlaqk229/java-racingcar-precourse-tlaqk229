@@ -19,7 +19,9 @@ public class Entry {
         HashSet<String> cars = new HashSet<>();
         for (Car car : entry) {
             String carName = car.getCarName();
-            if (cars.contains(carName)) return false;
+            if (cars.contains(carName)) {
+                return false;
+            }
             cars.add(carName);
         }
         return true;

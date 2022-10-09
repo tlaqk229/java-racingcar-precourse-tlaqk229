@@ -31,7 +31,7 @@ public class RacingController {
         Entry entry;
         do {
             entry = racingService.setCarEntry(racingView.carNamesInput());
-        } while(entry == null);
+        } while (entry == null);
         return entry;
     }
 
@@ -44,14 +44,14 @@ public class RacingController {
         TotalRound totalRound;
         do {
             totalRound = racingService.setTotalRound(racingView.totalRoundInput());
-        } while(totalRound == null);
+        } while (totalRound == null);
         return totalRound;
     }
 
     /**
      * 입력된 시도횟수만큼 라운드 실행
      *
-     * @param entry 참가 자동차 목록
+     * @param entry      참가 자동차 목록
      * @param totalRound 총 시도 횟수
      * @return 경주 진행 결과
      */

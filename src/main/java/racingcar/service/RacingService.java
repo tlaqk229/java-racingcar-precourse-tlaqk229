@@ -28,7 +28,7 @@ public interface RacingService {
     /**
      * 자동차 경주 1회 실행
      *
-     * @param entry 자동차 목록
+     * @param entry       자동차 목록
      * @param roundResult 현재까지 경주 진행한 결과
      */
     void roundProceed(Entry entry, RoundResult roundResult);
@@ -45,8 +45,8 @@ public interface RacingService {
      * 우승자 추가
      *
      * @param maxPosition 현재까지 가장 멀리간 위치
-     * @param carState 자동차 상태
-     * @param raceResult 현재까지 경주 진행한 결과
+     * @param carState    자동차 상태
+     * @param raceResult  현재까지 경주 진행한 결과
      * @return 가장 멀리간 위치(최신)
      */
     int addWinner(int maxPosition, CarState carState, RaceResult raceResult);
