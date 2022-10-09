@@ -4,6 +4,7 @@ import racingcar.model.constants.ErrorMessage;
 
 public class Car {
 
+    private static final int NAME_LENGTH_LIMIT = 5;
     private final String carName;
 
     public Car(String name) throws IllegalArgumentException {
@@ -17,7 +18,7 @@ public class Car {
     }
 
     public static boolean validateNameLength(String name) {
-        return name.length() <= 5;
+        return name.length() <= NAME_LENGTH_LIMIT;
     }
 
     public static boolean validateNameNotEmpty(String name) {
