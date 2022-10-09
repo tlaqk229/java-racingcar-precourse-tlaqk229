@@ -18,6 +18,14 @@ public class CarState {
         this.position += add;
     }
 
+    public boolean checkPositionAhead(int position) {
+        return this.position > position;
+    }
+
+    public boolean checkPositionSame(int position) {
+        return this.position == position;
+    }
+
     public String getCarName() {
         return carName;
     }

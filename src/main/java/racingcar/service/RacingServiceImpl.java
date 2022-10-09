@@ -116,12 +116,12 @@ public class RacingServiceImpl implements RacingService {
      * @return 가장 멀리간 위치(최신)
      */
     private int addWinner(int maxPosition, CarState carState, RaceResult raceResult) {
-        if (carState.getPosition() > maxPosition) {
+        if (carState.checkPositionAhead(maxPosition)) {
             raceResult.getWinners().clear();
             raceResult.getWinners().add(carState.getCarName());
             return carState.getPosition();
         }
-        if (carState.getPosition() == maxPosition) {
+        if (carState.checkPositionSame(maxPosition)) {
             raceResult.getWinners().add(carState.getCarName());
         }
         return maxPosition;
