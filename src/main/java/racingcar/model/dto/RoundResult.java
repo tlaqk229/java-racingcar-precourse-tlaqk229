@@ -20,8 +20,4 @@ public class RoundResult {
     public List<CarState> getRoundResult() {
         return roundResult;
     }
-
-    public void setRoundResult(List<CarState> roundResult) {
-        this.roundResult = roundResult;
-    }
 }
