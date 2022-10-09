@@ -37,8 +37,7 @@ public class RacingServiceImpl implements RacingService {
      * @param input 입력받은 자동자 이름들(문자열)
      * @return 배열로 분리된 자동차 이름들
      */
-    @Override
-    public String[] splitCarNames(String input) {
+    private String[] splitCarNames(String input) {
         String[] carNames = input.split(",");
         int nameCount = input.length() - input.replaceAll(",", "").length() + 1;
         if (nameCount != carNames.length) {
@@ -53,8 +52,7 @@ public class RacingServiceImpl implements RacingService {
      * @param carNames 자동차 이름 배열
      * @return 자동차 목록 객체(Entry)
      */
-    @Override
-    public Entry makeEntry(String[] carNames) {
+    private Entry makeEntry(String[] carNames) {
         List<Car> cars = new ArrayList<>();
         for (String carName : carNames) {
             cars.add(new Car(carName));
@@ -117,8 +115,7 @@ public class RacingServiceImpl implements RacingService {
      * @param raceResult  현재까지 경주 진행한 결과
      * @return 가장 멀리간 위치(최신)
      */
-    @Override
-    public int addWinner(int maxPosition, CarState carState, RaceResult raceResult) {
+    private int addWinner(int maxPosition, CarState carState, RaceResult raceResult) {
         if (carState.getPosition() > maxPosition) {
             raceResult.getWinners().clear();
             raceResult.getWinners().add(carState.getCarName());
